@@ -28,9 +28,9 @@ app
 
 4. Download Postman [here](https://www.getpostman.com/apps) and follow the installation instructions.
 
-5. Now, download the zip file and click twice on the zip download to unzip it and view its contents. You can choose to use an IDE like VSCode, Atom, Sublime Text, Vim to view the project files. OR To clone this repository, `cd` into your desired directory and run the following command on the terminal: `git clone https://github.com/rja907/RecLookup.git`.
+5. Now, download the zip file and click twice on the zip download to unzip it and view its contents. You can choose to use an IDE like VSCode, Atom, Sublime Text, Vim to view the project files. OR To clone this repository, `cd` into your desired directory and run the following command on the terminal: `git clone https://github.com/rja907/rec-lookup.git`.
 
-   > I have deliberately not added a `.gitignore` file which could help in avoiding `node_modules` directory so that it there is not an added step of `npm install`.
+   > I have deliberately not added a `.gitignore` file which could help in avoiding `node_modules` directory so that there is not an added step of `npm install` to install the dependencies listed in package.json.
 
 6. Now, using the terminal, `cd` into the project directory. After you are in the project directory, run the following command `npm start`. This command will start a server on port 8000 that can accept different types of POST requests.
 
