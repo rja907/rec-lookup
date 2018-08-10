@@ -123,7 +123,8 @@ app.post('/', (req, res) => {
       });
     },
     allOverError => {
-      res.send(result);
+      resp = { hits: result };
+      res.send(resp);
     }
   );
 });
