@@ -181,9 +181,9 @@ router.post('/NS', (req, res) => {
 
 router.post('/SRV', (req, res) => {
   const { lookup, recordType } = req.body;
-  console.log(recordType);
+  lookupSrv = '_jabber._tcp.' + lookup;
   if (recordType === 'SRV') {
-    dns.resolveSrv(lookup.toLowerCase(), (error, addresses) => {
+    dns.resolveSrv(lookupSrv, (error, addresses) => {
       if (error) {
         console.log(error);
         res.status(400).send(error);
@@ -191,7 +191,7 @@ router.post('/SRV', (req, res) => {
         console.log(addresses);
         res.status(200).send({
           type: `${recordType}`,
-          domain: lookup.toLowerCase(),
+          domain: lookupSrv,
           response: addresses
         });
       }
